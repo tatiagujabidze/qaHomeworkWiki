@@ -1,4 +1,4 @@
-export function myFunctionn(myNum: number): string {
+export function myFunction(myNum: number): string {
     if (myNum == 5) {
       // Here we have the first test; if the number IS 5, return "true".
       return "true";
