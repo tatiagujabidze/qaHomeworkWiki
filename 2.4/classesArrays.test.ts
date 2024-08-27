@@ -22,7 +22,7 @@ class Employees {
 let employees: Array<Employees> = [ 
   new Employees ("Kate Miller", 2680984136, "Sales Representative"),
   new Employees ("Mark Jones", 7651097235, "Customer Support"),
-  new Employees ("Tokyo Moore", 3781286725, "HR")
+  new Employees ("Tokyo Moore", 3781286725, "HR"),
 ]
 
 const addEmployee: By = By.name('addEmployee'); 
@@ -52,7 +52,7 @@ describe("should add employees to employee manager", () => {
         for(let i = 0; i < employees.length; i++) {
             await myFunc(employees[i]); 
         }; 
-        await driver.sleep(1000); 
+        await driver.sleep(3000); 
         await driver.quit(); 
     });
 }); 
