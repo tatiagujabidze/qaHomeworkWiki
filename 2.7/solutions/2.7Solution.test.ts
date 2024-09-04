@@ -20,6 +20,7 @@ let newInterns: Array<Intern> = [
     new Intern("Paul", 8018018801, "Handshake Master")
 ];
 
+
 let addInterns = async (newInterns) => {
     await pages.click(pages.addEm); 
     await pages.click(pages.newEm); 
@@ -30,6 +31,7 @@ let addInterns = async (newInterns) => {
     await pages.driver.sleep(3000); 
 };
 
+
 test('can add the bake off crew',async () => {
     await pages.navigate(); 
     await pages.getElement(pages.addEm); 
@@ -37,4 +39,4 @@ test('can add the bake off crew',async () => {
         await addInterns(newInterns[i]); 
     }; 
     await pages.driver.quit(); 
-})
+});
