@@ -9,7 +9,6 @@ const chromedriver = require("chromedriver");
 const driver: WebDriver = new Builder().withCapabilities(Capabilities.chrome()).build();
 
 const bernice: By = By.name('employee1');
-const marnie: By = By.name('employee2');
 const phillip: By = By.name('employee3');
 const nameDisplay: By = By.id("employeeTitle");
 const nameInput: By = By.name('nameEntry');
@@ -17,7 +16,7 @@ const phoneInput: By = By.name('phoneEntry');
 const titleInput: By = By.name('titleEntry');
 const saveButton: By = By.id('saveBtn');
 const cancelButton: By = By.name('cancel');
-const errorCard: By = By.css('errorCard');
+const errorCard: By = By.css('.errorCard');
 
 describe("Employee Manager 1.2", () => {
 
@@ -57,8 +56,8 @@ describe("Employee Manager 1.2", () => {
             until.elementTextContains(
             await driver.findElement(nameDisplay),
             "Bernice"
-            )
-        );
+            ));
+
         expect(
             await (await driver.findElement(nameInput)).getAttribute("value")
         ).toBe("Bernice Ortiz");
@@ -113,7 +112,7 @@ describe("Employee Manager 1.2", () => {
                 await (await driver.findElement(nameInput)).getAttribute("value")
             ).toBe("Test Name");
     });
-});np
+});
 
     describe("handles error messages correctly", () => {
         test("shows an error message for an empty name field", async () => {

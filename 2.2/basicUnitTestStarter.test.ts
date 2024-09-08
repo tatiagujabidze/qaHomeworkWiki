@@ -3,23 +3,29 @@ describe("Testing the calculator", () => {
       expect(calculator.add(2, 50)).toBe(52);
     });
     test("Addition works", () => {
-      expect(true).toBeTruthy();
+      expect(calculator.add(2, 3)).toBe(5);
     });
     test("Subtraction works", () => {
-      expect(true).toBeTruthy();
+      expect(calculator.subtract(37, 9)).toBe(28);
     });
     test("Multiplication works", () => {
-      expect(true).toBeTruthy();
+      expect(calculator.multiply(4, 12)).toBe(48);
     });
     test("Division works", () => {
-      expect(true).toBeTruthy();
+      expect(calculator.divide(81, 9)).toBe(9);
     });
     describe("Stretch Goals", () => {
       test("(2+2)/4 == 1", () => {
         expect(calculator.divide(calculator.add(2, 2), 4)).toBe(1);
       });
       test("(28/4)*(6/2)*(30-27+(3-4)) == 42", () => {
-        expect(true).toBeTruthy();
+        expect(calculator.divide(28, 4)).toBe(7);
+        expect(calculator.divide(6, 2)).toBe(3);
+        expect(calculator.subtract(3, 4)).toBe(-1);
+        expect(calculator.subtract(30, 27)).toBe(3);
+        expect(calculator.add(-1, 3)).toBe(2);
+        expect(calculator.multiply(7, 3)).toBe(21);
+        expect(calculator.multiply(21, 2)).toBe(42);
       });
     });
   });
