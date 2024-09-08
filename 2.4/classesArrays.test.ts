@@ -18,11 +18,10 @@ class Employees {
   }
 }; 
 
-//Create an array of four employees using your class.
+//Create an array of two employees using your class.
 let employees: Array<Employees> = [ 
   new Employees ("Kate Miller", 2680984136, "Sales Representative"),
   new Employees ("Mark Jones", 7651097235, "Customer Support"),
-  new Employees ("Tokyo Moore", 3781286725, "HR"),
 ]
 
 const addEmployee: By = By.name('addEmployee'); 
